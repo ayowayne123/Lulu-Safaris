@@ -3,6 +3,8 @@ import React, { useState, ChangeEvent } from "react";
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import Footer_Bg from "@/app/Layout/Footer_Bg.png";
+import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa6";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,10 +15,12 @@ function Footer() {
     setEmail(e.target.value);
   };
 
+  const currentYear = new Date().getFullYear();
+
   console.log(email);
   return (
     <>
-      <div className="h-[750px]  w-full relative">
+      <div className="h-[780px]  w-full relative">
         <Image
           src={Footer_Bg}
           alt="Image of WaterFall"
@@ -44,12 +48,69 @@ function Footer() {
               <span className="translate-y-2">Subscribe </span>
             </button>
           </form>
-          <div className="flex flex-row justify-between py-16 w-full ">
-            <div>Contact</div>
-            <div>Contact</div>
-            <div>Contact</div>
-            <div>Contact</div>
-            <div>Contact</div>
+          <div className="flex flex-row justify-between pt-16 w-full  font-bold text-3xl">
+            <div className=" ">
+              <div> Contact</div>
+              <div className="gap-4 flex flex-col py-4 font-light text-2xl">
+                <span>Contact</span>
+                <span>About</span>
+                <span>Preview</span>
+                <span>Meet the Team</span>
+              </div>
+            </div>
+            <div>
+              <div> Tours</div>
+              <div className="gap-4 flex flex-col py-4 font-light text-2xl">
+                <span>Contact</span>
+                <span>About</span>
+                <span>Preview</span>
+                <span>Meet the Team</span>
+              </div>
+            </div>
+            <div>
+              <div> People</div>
+              <div className="gap-4 flex flex-col py-4 font-light text-2xl">
+                <span>Contact</span>
+                <span>About</span>
+                <span>Preview</span>
+                <span>Meet the Team</span>
+              </div>
+            </div>
+            <div>
+              <div> Company</div>
+              <div className="gap-4 flex flex-col py-4 font-light text-2xl">
+                <span>Contact</span>
+                <span>About</span>
+                <span>Preview</span>
+                <span>Meet the Team</span>
+              </div>
+            </div>
+            <div className="">
+              <div> Contact</div>
+              <div className="gap-4 flex flex-col py-4 font-light text-2xl">
+                <span>Contact</span>
+                <span>About</span>
+                <span>Preview</span>
+                <span>Meet the Team</span>
+              </div>
+            </div>
+          </div>
+          <div className="text-white  flex flex-row justify-between pt-20">
+            <span className="text-lg font-bold">
+              {" "}
+              Copyright © {currentYear} Lulu Safaris
+            </span>
+            <span className="flex flex-row gap-4 justify-center items-center font-bold text-5xl ">
+              <Link className="hover:text-yellow" href="https://facebook.com">
+                <FaFacebookF />{" "}
+              </Link>
+              <Link className="hover:text-yellow" href="https://Instagram.com">
+                <FaInstagram />{" "}
+              </Link>
+              <Link className="hover:text-yellow" href="https://Twitter.com">
+                <FaTwitter />{" "}
+              </Link>
+            </span>
           </div>
         </div>
       </div>
