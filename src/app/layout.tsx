@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Footer from "./Layout/Footer";
+import TopNav from "./Layout/Header";
 
 const gotham = localFont({
   src: [
@@ -56,6 +57,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={gotham.className}>
+        <TopNav />
         {children}
 
         <Footer />
