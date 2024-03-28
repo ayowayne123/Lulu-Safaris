@@ -1,17 +1,12 @@
+import { NextFont } from "next/dist/compiled/@next/font";
 import React from "react";
-import localFont from "next/font/local";
+interface TitleProps {
+  gerhaus: {
+    className: any;
+  };
+}
 
-const gerhaus = localFont({
-  src: [
-    {
-      path: "../../public/fonts/Gerhaus.ttf",
-      weight: "700",
-      style: "normal",
-    },
-  ],
-});
-
-function Title() {
+const Title: React.FC<TitleProps> = ({ gerhaus }) => {
   return (
     <div className={`${gerhaus.className}   flex flex-col items-center `}>
       <span className="text-[300px] text-transparent  bg-clip-text bg-gradient-to-b from-[#ffffff] through-[#ffffff90] to-transparent ">
@@ -22,6 +17,6 @@ function Title() {
       </span>
     </div>
   );
-}
+};
 
 export default Title;

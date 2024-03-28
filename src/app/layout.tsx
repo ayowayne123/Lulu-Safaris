@@ -57,10 +57,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={gotham.className}>
-        <TopNav />
+        {/* <TopNav /> */}
         {children}
 
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

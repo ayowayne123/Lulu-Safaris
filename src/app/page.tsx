@@ -2,11 +2,22 @@ import Image from "next/image";
 import Background from "../../public/LuluBg.png";
 import Title from "./hero";
 import Services from "./services";
+import localFont from "next/font/local";
+
+const gerhaus = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Gerhaus.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+});
 
 export default function Home() {
   return (
     <main className="w-full  ">
-      <div className="min-h-[200vh] w-full relative">
+      <div className="h-[1970px] w-full relative">
         <Image
           src={Background}
           alt="Water fall"
@@ -14,9 +25,9 @@ export default function Home() {
           fill
         />
         <div className="absolute z-20 top-32 w-full ">
-          <Title />
+          <Title gerhaus={gerhaus} />
 
-          <Services />
+          <Services gerhaus={gerhaus} />
         </div>
       </div>
     </main>

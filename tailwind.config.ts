@@ -25,14 +25,14 @@ const config: Config = {
         DEFAULT: "2rem",
         sm: "2rem",
         lg: "3rem",
-        xl: "4rem",
+        xl: "3rem",
       },
     },
     screens: {
       sm: "640px",
       // => @media (min-width: 640px) { ... }
 
-      md: "750px",
+      md: "768px",
       // => @media (min-width: 768px) { ... }
 
       lg: "1280px",
@@ -41,7 +41,16 @@ const config: Config = {
       xl: "1440px",
       // => @media (min-width: 1440px) { ... }
     },
-    extend: {},
+    extend: {
+      dropShadow: {
+        gold: "3px 3px 0px #C29D44",
+        white: "3px 3px 0px #ffffff",
+        "4xl": [
+          "0 35px 35px rgba(0, 0, 0, 0.25)",
+          "0 45px 65px rgba(0, 0, 0, 0.15)",
+        ],
+      },
+    },
   },
   plugins: [],
 };

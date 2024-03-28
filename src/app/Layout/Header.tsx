@@ -5,7 +5,7 @@ import Logo from "@/app/Layout/lulu_logo.png";
 
 const TopNav = () => {
   return (
-    <nav className="flex w-full  h-32   bg-gradient-to-b from-[#231F2072] to-transparent absolute z-20 ">
+    <nav className="flex w-full  h-32   bg-gradient-to-b from-[#231F2072]  absolute z-20 ">
       <div className="container justify-between flex w-full  items-center text-white ">
         <div className="relative">
           <Link href="/" className="h-20  ">
